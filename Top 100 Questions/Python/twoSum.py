@@ -16,19 +16,23 @@ class Solution:
     for i in range(len(nums)):
       num = nums[i]
       complement = target - num #complement is 7
-      
+              
+              
+      print(hashMap)
       if num in hashMap:
+
         return [hashMap[num], i] #{7:0} 7 stores at index 0, its the first complement
       else:
         hashMap[complement] = i
-
+        
+    
 sol = Solution()
-num1 = [2,5,6,7]
+num1 = [2,6,4,5]
 target1 = 7
 
-num2 = [2,5,6,7]
-target2 = 9
+
 
 print(sol.OptimalTwoSums(num1, target1))
+
 
 
