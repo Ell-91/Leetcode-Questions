@@ -1,15 +1,17 @@
 def twoSums(array, target):
     values = dict()
 
-    for i in range(len(array)): 
+    for i in range(len(array)):
         complement = target - array[i]
-        if complement in values:
-            return [array[i], complement[i]]
+        currentNum = array[i]
+ 
+        if currentNum in values:
+            return [values[currentNum], i]
         else:
-            values[i] = complement[i]
+            values[complement] = i
 
 
 arr1 = [3, 5, 7, 8, 19]
 target = 12 
 
-twoSums(arr1, target)
+print(twoSums(arr1, target))
