@@ -4,12 +4,12 @@
 
 HOME_TEAM_WON = 1
 
-def tournamentWinner(competitions, results):
+def tournamentWinner(competitors, results):
 
     currentBestTeam = " "
     outcome = dict({currentBestTeam: 0})
 
-    for index, values in enumerate(competitions):
+    for index, values in enumerate(competitors):
         result = results[index]
         homeTeam, awayTeam = values  # DECOMPOSE string to get each individule team
 
