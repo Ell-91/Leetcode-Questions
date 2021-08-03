@@ -14,16 +14,17 @@ def tournamentWinner(competitors, results):
         homeTeam, awayTeam = values  # DECOMPOSE string to get each individule team
 
         winningTeam = homeTeam if result == HOME_TEAM_WON else awayTeam
-        updateScores(winningTeam, 3, outcome)
+
+        updateDictionary(winningTeam, 3, outcome)
         
         if outcome[winningTeam] > outcome[currentBestTeam]:
             currentBestTeam = winningTeam
-            
+    print(outcome)    
     return currentBestTeam
 
-def updateScores(team, points, outcome):
+def updateDictionary(team, points, outcome):
     if team not in outcome:
-        outcome[team] = 0
+        outcome[team] = 0 #add it to the dictionary
     
     outcome[team] += points
 
