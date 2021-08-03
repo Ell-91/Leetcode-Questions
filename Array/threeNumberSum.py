@@ -1,8 +1,6 @@
 def threeNumberSum(array, targetSum):
-    array.sort #sort in order
+    array.sort() #sort in order
     triplets = []
-
-    currentSum = 0
 
     for i in range(len(array)-2):
         left_ptr = i + 1
@@ -23,6 +21,6 @@ def threeNumberSum(array, targetSum):
                 right_ptr -= 1
     return triplets
 
-array = [-12, 3, 1, 2, -6, 5, -8,6]
+array = [-12, 3, 1, 2, -6, 5, -8, 6]
 target = 0
 print(threeNumberSum(array, target))
