@@ -1,9 +1,11 @@
+# Time: O(n) n is the length of the array
+# Space: O(1) everything in place, no new memory created
 def moveElementToEnd(array, toMove):
     i = 0
     j = len(array) - 1
     
     while i < j:
-        while array[j] == toMove:
+        while i < j and array[j] == toMove:
             j -= 1
         if array[i] == toMove:
             array[i], array[j] = array[j], array[i]
