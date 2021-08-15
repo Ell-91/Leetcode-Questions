@@ -3,7 +3,7 @@ def spiralTraverse(array):
 
    #variables to keep track of the rows and the colums
     start_row = 0
-    end_row = len(array) -1 
+    end_row = len(array)- 1 
     
     start_col = 0
     end_col = len(array[0]) - 1  # length of inner array (initialized to 3)
@@ -16,7 +16,7 @@ def spiralTraverse(array):
 
         # Get last column of 2D array
         for row in range(start_row + 1, end_row + 1):
-            result.append([row][end_col])
+            result.append(array[row][end_col])
 
         # Get last row of 2D array
         '''for col in range(end_col - 1, start_col + 1):
@@ -33,7 +33,7 @@ def spiralTraverse(array):
         for row in reversed(range(start_row + 1, end_row)):
             if start_col == end_col:
                 break
-            result.append(array[row][start_col]) 
+            result.append(array[row][start_col])
         
         start_row += 1
         end_row -= 1
@@ -45,5 +45,5 @@ def spiralTraverse(array):
 
 
 
-array =[[1,2,3,5], [12, 13, 14,5], [11, 16, 15, 6], [10, 9, 8,7]]
+array =[[1,2,3,4], [12, 13, 14,5], [11, 16, 15, 6], [10, 9, 8,7]]
 print(spiralTraverse(array))
