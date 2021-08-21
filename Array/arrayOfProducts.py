@@ -1,5 +1,5 @@
 def arrayOfProducts(array):
-    products = [1 for _ in range(len(array))]
+    products = [1 for _ in range(len(array))] #Initialize an array of 1's
 
     leftRunningProduct = 1
     for i in range(len(array)):
