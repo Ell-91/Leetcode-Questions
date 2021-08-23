@@ -1,3 +1,6 @@
+#Time: O(n log n) because we are sorting the array
+#Space: O(n) may end up storing all the elements in the results array
+
 def threeNumberSum(array, targetSum):
     array.sort() #sort in order
     triplets = []
