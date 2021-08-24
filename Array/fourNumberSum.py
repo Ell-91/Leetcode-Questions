@@ -1,6 +1,6 @@
 def fourNumberSum(array, targetSum):
-    #if array == [] or len(array) < 4:
-        #return False
+    if array == [] or len(array) < 4:
+        return False
 
     array.sort()
     result = []
