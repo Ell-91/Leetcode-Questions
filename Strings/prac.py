@@ -1,4 +1,4 @@
-def 
+def longetsPalindromeSubstring(string):
 
 
 string = 'abaxyzzyxf'
